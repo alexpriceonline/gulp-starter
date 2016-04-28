@@ -1,0 +1,24 @@
+{% load compress static %}
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title></title>
+        <meta name="description" content="" />
+
+        <link rel="icon" type="image/ico" href="{% static 'favicon.ico' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/app.css' %}">
+
+        {% block extra_css %}{% endblock %}
+    </head>
+
+    <body data-module="example">
+
+        <script type="text/javascript" src="{% static 'javascripts/app.js' %}"></script>
+        {% block extra_js %} {% endblock %}
+    </body>
+</html>
+

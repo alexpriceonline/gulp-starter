@@ -1,15 +1,43 @@
-# ![Gulp Starter](extras/demo/src/images/gulp-starter-logo.png)
+# Gulp Starter
 
-[![Build Status](https://travis-ci.org/vigetlabs/gulp-starter.svg?branch=static-server)](https://travis-ci.org/vigetlabs/gulp-starter)
+Gulp Starter is a delicious blend of tasks and build tools poured into
+[Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline.
 
-Gulp Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure. The [extras](./extras) folder contains configuration details for Rails and Craft, with more to follow. [Check out the compiled demo](http://vigetlabs.github.io/gulp-starter/) and play with [the source files](extras/demo)!
+This version has been modified to play nice with projects that have their own
+development web server. Most areas of Gulp Starter remain untouched. I've just
+ripped out all of the bits that we don't need when using something like the
+[Django](https://www.djangoproject.com) web application framework.
+
+I've left 99.8% of the original documentation so if some bits don't make sense
+or link to directories that don't exist anymore, please let me know.
+
+There is also example an exmaple `index.html` in `app` along with an example
+Django base template at `app/templates/base.html`.
+
+## Quick setup
+
+1. Clone this bad boy into your project and run `npm install` to get all the
+`node_modules`.
+
+2. Head over to `gulpfile.js/config.json` and change `app` to the name of your
+project folder and make sure the `proxy` value matches you web server. This
+will allow BrowserSync to detect changes to your templates and auto-refresh
+the browser.
+
+```json
+"browserSync": {
+  "files": ["<your_project_folder>/**/*.html", "public”],
+  "proxy": "localhost:8000"
+},
+```
+
+3. Run the developement gulp tasks with
 
 ```bash
-git clone https://github.com/vigetlabs/gulp-starter.git MyApp
-cd MyApp
-npm install
 npm start
 ```
+
+## Feature list
 
 Features | Tools Used
 ------ | -----
@@ -59,22 +87,6 @@ npm run test
 npm run production
 ```
 
-### Running the Demo
-By default, the files in `src` are pretty minimal. If you're just exploring and would like to play with the [demo](http://vigetlabs.github.io/gulp-starter/) files, the files available in `extras/demo`. Just replace `src` and `config.json` with the ones in `extras/demo`, or simply check out the `demo` branch.
-
-```
-git checkout demo
-npm start
-```
-
-### Starting a fresh project
-If you plan on using this to start a new project, be sure and clear out the `git` data start a fresh history:
-
-```bash
-rm -rf .git && git init
-git commit -m "Initialized with Gulp Starter"
-```
-
 ## Configuration
 Directory and top level settings are convienently exposed in `gulpfile.js/config.json`. Use this file to update paths to match the directory structure of your project, and to adjust task options.
 
@@ -106,7 +118,6 @@ A `README.md` with details about each asset task are available in their respecti
 
 - [JavaScript](src/javascripts)
 - [Stylesheets](src/stylesheets)
-- [HTML](src/html)
 - [Fonts](src/fonts)
 - [Images](src/images)
 - [Icon Font](src/icons#iconfont-task)

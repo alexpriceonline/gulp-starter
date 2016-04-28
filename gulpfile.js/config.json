@@ -6,9 +6,8 @@
 
   "tasks": {
     "browserSync": {
-      "server": {
-        "baseDir": "public"
-      }
+      "files": ["app/**/*.html", "public"],
+      "proxy": "localhost:8000"
     },
 
     "static": {
@@ -29,6 +28,7 @@
       },
       "extractSharedJs": false
     },
+
     "css": {
       "src": "stylesheets",
       "dest": "stylesheets",
@@ -42,17 +42,6 @@
         ]
       },
       "extensions": ["sass", "scss", "css"]
-    },
-
-    "html": {
-      "src": "html",
-      "dest": "./",
-      "dataFile": "data/global.json",
-      "htmlmin": {
-        "collapseWhitespace": true
-      },
-      "extensions": ["html", "json"],
-      "excludeFolders": ["layouts", "shared", "macros", "data"]
     },
 
     "images": {
@@ -78,10 +67,6 @@
       "src": "icons",
       "dest": "images",
       "extensions": ["svg"]
-    },
-
-    "production" : {
-      "rev": true
     }
   }
 }

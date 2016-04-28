@@ -1,15 +1,15 @@
 {
   "name": "gulp-starter",
-  "version": "3.1.0",
-  "description": "A full featured configurable gulp asset pipeline and static site builder",
+  "version": "3.1.1",
+  "description": "A full featured configurable gulp asset pipeline modified for Django",
   "engines": {
     "node": ">=0.12.0 ~5.9.0",
     "npm": ">=2.14.12 ~3.7.3"
   },
-  "homepage": "http://code.viget.com/gulp-starter/",
+  "homepage": "http://github.com/alexpriceonline/gulp-starter",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vigetlabs/gulp-starter.git"
+    "url": "git://github.com/alexpriceonline/gulp-starter.git"
   },
   "scripts": {
     "start": "gulp",
