@@ -24,7 +24,7 @@ project folder and make sure the `proxy` value matches you web server. This
 will allow BrowserSync to detect changes to your templates and auto-refresh
 the browser.
 
-```json
+```
 "browserSync": {
   "files": ["<your_project_folder>/**/*.html", "public”],
   "proxy": "localhost:8000"
