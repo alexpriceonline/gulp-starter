@@ -1,4 +1,4 @@
-# Gulp Starter
+# Gulp Starter - Django style
 
 Gulp Starter is a delicious blend of tasks and build tools poured into
 [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline.
