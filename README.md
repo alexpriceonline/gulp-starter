@@ -1,4 +1,4 @@
-# Gulp Starter
+# Gulp Starter - Django style
 
 Gulp Starter is a delicious blend of tasks and build tools poured into
 [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline.
@@ -11,21 +11,21 @@ ripped out all of the bits that we don't need when using something like the
 I've left 99.8% of the original documentation so if some bits don't make sense
 or link to directories that don't exist anymore, please let me know.
 
-There is also example an exmaple `index.html` in `app` along with an example
-Django base template at `app/templates/base.html`.
+There is also example an exmaple [index.html](app/index.html) in `app` along with an example
+Django base template at [app/templates/base.html](app/templates/base.html).
 
 ## Quick setup
 
 1. Clone this bad boy into your project and run `npm install` to get all the
 `node_modules`.
 
-2. Head over to `gulpfile.js/config.json` and change `app` to the name of your
+2. Head over to [gulpfile.js/config.json](gulpfile.js/config.json) and change `app` to the name of your
 project folder and make sure the `proxy` value matches you web server. This
 will allow BrowserSync to detect changes to your templates and auto-refresh
 the browser. It does this by proxying your development server so you'll be
 watching `localhost:3000` in your browser.
 
-```json
+```
 "browserSync": {
   "files": ["<your_project_folder>/**/*.html", "public”],
   "proxy": "localhost:8000"
@@ -44,7 +44,6 @@ Features | Tools Used
 ------ | -----
 **CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps
 **JavaScript** | [Babel](http://babeljs.io/), [Webpack](http://webpack.github.io/)
-**HTML** | [Nunjucks](https://mozilla.github.io/nunjucks/), [gulp-data](https://github.com/colynb/gulp-data), or bring your own
 **Images** | Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin)
 **Icons** | Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) and/or [Icon Fonts](https://www.npmjs.com/package/gulp-iconfont)
 **Fonts** | Folder and `.sass` mixin for including WebFonts
