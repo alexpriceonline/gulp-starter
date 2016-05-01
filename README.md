@@ -22,7 +22,8 @@ Django base template at `app/templates/base.html`.
 2. Head over to `gulpfile.js/config.json` and change `app` to the name of your
 project folder and make sure the `proxy` value matches you web server. This
 will allow BrowserSync to detect changes to your templates and auto-refresh
-the browser.
+the browser. It does this by proxying your development server so you'll be
+watching `localhost:3000` in your browser.
 
 ```json
 "browserSync": {
