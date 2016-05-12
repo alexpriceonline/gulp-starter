@@ -1,0 +1,18 @@
+// ==============================================
+// Global styles
+// ==============================================
+
+
+html,
+body {
+  @extend %clearfix;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  min-height: 0;
+}
+

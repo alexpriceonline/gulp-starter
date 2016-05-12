@@ -1,10 +1,9 @@
 // ==============================================
-// Demo style module
+// Project mixins
 // ==============================================
 
-h1 {
-    background: $black;
-    color: $white;
-    margin: 0;
-    padding: 20px;
+%clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
 }

@@ -1,13 +1,23 @@
 // ==============================================
 // Main SCSS entry point
-// Import your modules and mixins here
+// Import your components and mixins here
 // ==============================================
 
 // Import Normalize from `node_modules`
 @import 'normalize';
 
-// Base
-@import 'base/variables';
+// Mixins
 
-// Modules
-@import 'modules/foo';
+@import 'mixins/mixins';
+
+// Variables
+
+@import 'variables/colours';
+
+// Base
+
+@import 'base/global';
+
+// Components
+
+@import 'components/foo';

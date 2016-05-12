@@ -1,0 +1,13 @@
+linters:
+  Indentation:
+    width: 2
+    allow_non_nested_indentation: true
+
+  LeadingZero:
+    enabled: false
+
+  VendorPrefix:
+    enabled: false
+
+  MergeableSelector:
+    enabled: false
