@@ -116,8 +116,8 @@ npm run gulp production
 ## Asset Task Details
 A `README.md` with details about each asset task are available in their respective folders in the `src` directory:
 
-- [JavaScript](src/javascripts)
-- [Stylesheets](src/stylesheets)
+- [JavaScript](src/js)
+- [Stylesheets](src/css)
 - [Fonts](src/fonts)
 - [Images](src/images)
 - [Icon Font](src/icons#iconfont-task)
